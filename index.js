@@ -44,6 +44,36 @@ beforeEach(function () {
   }); 
 
   function appendCat(Broom) {
-      //const copyOfCats = cats.slice();
-      cats.push(Broom);
+    const allCats = [...cats, 'Broom'];
+    return allCats
+  }
+
+  beforeEach(function () {
+    cats.length = 0;
+
+    cats.push('Milo', 'Otis', 'Garfield');
+  }); 
+
+  function prependCat(Arnold) {
+    const allCats = ['Arnold', ...cats]
+    return allCats
+  }
+  beforeEach(function () {
+    cats.length = 0;
+
+    cats.push('Milo', 'Otis', 'Garfield');
+  }); 
+
+  function removeLastCat() {
+    //const copyOfCats = [...cats, cats.slice(0, cats.length-1)];
+    return cats.slice(0, cats.length-1)
+  }
+  beforeEach(function () {
+    cats.length = 0;
+
+    cats.push('Milo', 'Otis', 'Garfield');
+  }); 
+
+  function removeFirstCat() {
+    return cats.slice(1, cats.length2)
   }
